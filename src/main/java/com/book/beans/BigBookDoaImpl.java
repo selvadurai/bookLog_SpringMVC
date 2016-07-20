@@ -10,6 +10,7 @@ import com.book.model.BigBookTable;
 
 public class BigBookDoaImpl implements BigBookDoa {
 
+	//SessionFactory is created  
 	private SessionFactory sessionFactory;
 
     public void setSessionFactory(SessionFactory sessionFactory) {
@@ -26,6 +27,8 @@ public class BigBookDoaImpl implements BigBookDoa {
 		session.close();
 	}
 
+	
+	
 	@Override
 	public List<BigBookTable> getBookList() {
 		  Session session = this.sessionFactory.openSession();

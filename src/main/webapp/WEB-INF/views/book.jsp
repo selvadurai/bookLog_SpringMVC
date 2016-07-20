@@ -5,8 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<title>Home</title>
-	<title>Bootstrap Case</title>
+	<title>${name}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
@@ -30,31 +29,72 @@
   </div>
 </nav>
 
-				
-
-   <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>BookName</th>
-        <th>Rate</th>
-        <th>Category</th>
-      </tr>
-    </thead>
+	<table>
     <tbody>
-      <c:forEach var="listValue" items="${bookList}">
-      <tr>
-        <td>${listValue.getId()} </td>
-        <td><a href="book?id=${listValue.getId()}"> ${listValue.getName() } </a></td>
-        <td>${listValue.getBookRate() } </td>
-        <td>${listValue.getCategory() } </td>
+    
+       <tr>
+        <td>id </td>
+        <td>${id}</td>  
       </tr>
-      </c:forEach>
+     
+       <tr>
+        <td>isbn </td>
+        <td>${isbn}</td>  
+      </tr>
+     
+      <tr>
+        <td>name: </td>
+        <td>${name}</td>  
+      </tr>
+     
+        
+       
+       <tr>
+        <td>Author's first Name: </td>
+        <td>${fname}</td>  
+      </tr>
+      
+      
+      
+       <tr>
+        <td>Author's last  Name: </td>
+        <td>${lname}<br> </td>  
+      </tr>
+      
+      
+ 
+      
+      <tr>
+         <td>Category </td>
+         <td>${cat} <br>   </td>  
+      </tr>
+      
+      
+      
+      <tr>
+        <td>Medie Type </td>
+        <td>${media}<br></td>  
+      </tr>
     </tbody>
-  </table>
-   
-
-
+  </table>     
+     
+     <br>
+    
+ <p>Description</p>    
+ <textarea rows="4" cols="50" readonly>
+  ${desc}  
+ </textarea> 
+     
+    <br>
+    <br> 
+ 
+  <p>Lesson</p>    
+ <textarea rows="4" cols="50" readonly>
+  ${lesson}  
+ </textarea>      
+    
+     
+  
 
 </body>
 </html>

@@ -56,7 +56,7 @@ public class BigBookTable{
 	public BigBookTable() {
 	}
 
-	public long getId() {
+	public int getId() {
 		return this.id;
 	}
 
