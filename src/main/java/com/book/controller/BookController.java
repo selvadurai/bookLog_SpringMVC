@@ -58,7 +58,9 @@ public class BookController {
 		    //Today get today's date from the server
 		    java.sql.Date today = new java.sql.Date(Calendar.getInstance().getTime().getTime());
 			
-			
+		    try {
+		    	 
+
 		    //function being defined before being addded to hibernate 
 		    book.setId(incrementId);
 		    book.setName(bookname);
@@ -75,6 +77,11 @@ public class BookController {
 		    //Adds book to the bussiness model, and is now on the database. 
 		    bookDoa.addbook(book);
 		    
+		    }
+              catch (Exception e) {
+		    	 return "redirect:add";
+		       }
+
 		 	return "home";
 			
 		}
